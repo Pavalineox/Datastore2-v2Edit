@@ -1,4 +1,6 @@
--- Author: Pavalineox
+-- Author: Kampfkarren
+-- Edited by: Pavalineox
+
 -- This is my mediocre rewrite of Kampfkarren's Datastore2 module, focused on keeping simplicity while integrating new roblox datastore stuff
 -- Some stuff in here is kind of hard-baked and could be better (like having autosaves automatically happen as an addition to the regular ds2 saving method)
 

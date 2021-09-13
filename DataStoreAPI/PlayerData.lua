@@ -91,11 +91,13 @@ function PlayerData:OnHeartbeat(step)
     --Check for autosave
     if not self.lastAutosaveTime then self.lastAutosaveTime = os.clock() end
     if (os.clock()-GlobalSettings.autosaveInterval) > self.lastAutosaveTime then
-        self:Debug("Autosaving: ", self.playerName)
         self.lastAutosaveTime = os.clock()
-        --Autosave by forcing it to think we updated its metadata
-        self:OnKeyUpdated(true)
-        --very talented programmer
+        if self.valueUpdated then -- Only autosave if the value has been updated
+            self:Debug("Autosaving: ", self.playerName)
+            --Autosave by forcing it to think we updated its metadata
+            self:OnKeyUpdated(true)
+            --very talented programmer
+        end
     end
 end
 
