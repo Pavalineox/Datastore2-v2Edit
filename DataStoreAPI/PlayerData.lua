@@ -2,6 +2,13 @@
 -- This is my mediocre rewrite of Kampfkarren's Datastore2 module
 -- I say rewrite but almost all of this is derived from his work just with edits for ds2 and removing some extraneous functions
 
+-- In DS2 this class inherits stuff like saving method, but since i was removing a lot of functions it had a lot less content and i just put everything in one class
+-- May not be the best design but IMO it is simple and clear since we only use one saving method anyways
+
+-- This has some hard-baked stuff for convenience, like autosaving, which should really be nested in options
+
+-- BUT This isn't an open-source module so i took some liberties/practicalities
+
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local ServerStorage = game:GetService("ServerStorage")

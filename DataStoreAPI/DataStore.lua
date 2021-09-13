@@ -1,5 +1,10 @@
 -- Author: Pavalineox
 -- This is my mediocre rewrite of Kampfkarren's Datastore2 module, focused on keeping simplicity while integrating new roblox datastore stuff
+-- Some stuff in here is kind of hard-baked and could be better (like having autosaves automatically happen as an addition to the regular ds2 saving method)
+
+--DataStore:Fetch is the same as Datastore2__call, just didnt feel like using the call metamethod because i'm simple minded
+--PlayerData is a class that gets instantiated for each new datastore fetched and then that goes in the cache
+--Basically the same thing kampfkareen does except the playerdata class uses our object orientation module and is a single class rather than inheriting other classes like in ds2
 local ModuleContainer = require(game:GetService("ReplicatedStorage").ModuleScriptLookup)
 local ReplicatedConnectionLookup = require(game:GetService("ReplicatedStorage").ReplicatedConnectionLookup)
 local ObjectOrientation = require(ModuleContainer.ObjectOrientation)
